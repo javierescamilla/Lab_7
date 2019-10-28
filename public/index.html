@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Blog Post</title>
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1> List of Test cases </h1>
+    <div class = "row">
+        <div class = "Column">
+            <p>Post</p>
+            <form>
+                Title:<br>
+                <input type="text" name="Title_box" id="Post_title">
+                <br>
+                Content:<br>
+                <input type="text" name="Content_box" id="Post_content">
+                <br>
+                Author:<br>
+                <input type="text" name="Author_box" id="Post_author">
+                <br>
+                Publish Date:<br>
+                <input type="text" name="PublishDate_box" id="Post_date">
+                <br><br>
+                <input type="submit" value="Submit" id="Post_submit">
+            </form> 
+        </div>
+        <div class = "Column">
+            <p>Delete</p>
+            <form>
+                Id:<br>
+                <input type="text" name="Id_box" id="Delete_Id">
+                <br><br>
+                <input type="submit" value="Submit" id="Delete_submit">
+            </form> 
+        </div>
+        <div class = "Column">
+            <p>Update</p>
+            <form>
+                Id:<br>
+                <input type="text" name="Id_box" id="Update_id">
+                <br>
+                Title:<br>
+                <input type="text" name="Title_box" id="Update_title">
+                <br>
+                Content:<br>
+                <input type="text" name="Content_box" id="Update_content">
+                <br>
+                Author:<br>
+                <input type="text" name="Author_box" id="Update_author">
+                <br>
+                Publish Date:<br>
+                <input type="text" name="PublishDate_box" id="Update_date">
+                <br><br>
+                <input type="submit" value="Submit" id="Update_submit">
+            </form> 
+        </div>
+    </div>
+
+    <ul id="TCsList">
+    </ul>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

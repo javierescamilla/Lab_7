@@ -1,0 +1,30 @@
+{
+  "name": "blog-post",
+  "version": "1.0.0",
+  "description": "Blog Post CRUD",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javierescamilla/Lab_7.git"
+  },
+  "keywords": [],
+  "author": "Javier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javierescamilla/Lab_7/issues"
+  },
+  "homepage": "https://github.com/javierescamilla/Lab_7#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "underscore": "^1.9.1",
+    "uuid": "^3.3.3",
+    "uuid4": "^1.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+.Column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
