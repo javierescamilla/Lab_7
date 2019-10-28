@@ -98,6 +98,7 @@ app.post( "/blog-posts", jsonParser, (req, res) => {
 
 app.delete("/blog-posts/:id", (req, res) =>{
     let id = req.params.id;
+    console.log(id)
     for(let i = 0; i < TestCases.length; i++){
         if(TestCases[i].id == id){
             TestCases.splice(i,1);
@@ -108,13 +109,15 @@ app.delete("/blog-posts/:id", (req, res) =>{
             })
         }
     }
+    res.statusMessage = "UUID not found";
     return res.status(404).json({
         message: "UUID not found",
         status: 404  
     })
 })
 
-app.put("/blog-post/:id", jsonParser, (req, res) =>{
+app.put("/blog-posts/:id", jsonParser, (req, res) =>{
+
     let params = req.params;
     let idToUpdate = params.id;
     
@@ -123,6 +126,11 @@ app.put("/blog-post/:id", jsonParser, (req, res) =>{
     let content = req.body.content;
     let author = req.body.author;
     let publishDate = req.body.publishDate;
+
+    console.log(title)
+    console.log(content)
+    console.log(author)
+    console.log(publishDate)
     
     if(!id){
         res.statusMessage = "Missing field in body";
@@ -153,6 +161,10 @@ app.put("/blog-post/:id", jsonParser, (req, res) =>{
                 TestCases[i].publishDate = publishDate;
             }
             found = 1;
+            return res.status(202).json({
+                message: "Updated",
+                status: 202
+            })
         }
     }
     if(!found){
